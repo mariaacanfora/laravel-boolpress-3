@@ -12,4 +12,5 @@ class HomeController extends Controller
         $user = User::all();
         return view('admin.home', compact('user'));
     }
+
 }

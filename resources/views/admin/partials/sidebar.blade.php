@@ -11,7 +11,7 @@
         </li>
         
         <li class="pb-5">
-            <a href="#" class="text-light">Crea post</a>
+            <a href="{{route('admin.posts.create')}}" class="text-light">Crea post</a>
         </li>
     </ul>
 </div>

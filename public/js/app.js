@@ -1914,12 +1914,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'App',
   data: function data() {
     return {
-      msg: 'Benvenuto in WordPress'
+      helloMsg: "Benvenuto in Matrix",
+      postsList: []
     };
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    window.axios.get("/api/posts").then(function (resp) {
+      _this.postsList = resp.data;
+    });
   }
 });
 
@@ -37511,9 +37521,16 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container text-center" }, [
-    _c("h1", [_vm._v(_vm._s(_vm.msg))]),
-  ])
+  return _c(
+    "div",
+    { staticClass: "container text-center" },
+    _vm._l(_vm.postsLists, function (post) {
+      return _c("div", { key: post.id }, [
+        _c("h1", [_vm._v(_vm._s(_vm.helloMsg))]),
+      ])
+    }),
+    0
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
