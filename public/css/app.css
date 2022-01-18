@@ -10962,3 +10962,31 @@ a.text-dark:focus {
   }
 }
 
+header {
+  background-image: url(https://image.shutterstock.com/image-photo/work-desk-free-space-text-260nw-395300572.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+}
+
+header .top-right {
+  position: absolute;
+  right: 10px;
+  top: 18px;
+}
+
+header .links > a {
+  color: #636b6f;
+  padding: 0 25px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.sidebar {
+  background-color: #636b6f;
+  height: calc(100vh - 55.05px);
+}
+
